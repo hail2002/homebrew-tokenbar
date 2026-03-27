@@ -14,7 +14,7 @@ cask "tokenbar" do
 
   postflight do
     system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/TokenBar.app"],
+                   args: ["-d", "com.apple.quarantine", "#{appdir}/TokenBar.app"],
                    sudo: false
   end
 
