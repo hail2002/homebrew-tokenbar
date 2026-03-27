@@ -1,6 +1,6 @@
 cask "tokenbar" do
-  version "2.0.4"
-  sha256 "ab74e47f3515e30b1e50a3a9e1e91a5439f55e2dbd47fbe4d2f4a7afa0e2b77f"
+  version "2.0.5"
+  sha256 "644125ea93fee93cbfed67213bcc0fef019d7911e982ddb650febf8deaa40193"
 
   url "https://github.com/hail2002/tokenbar/releases/download/v#{version}/TokenBar.zip"
   name "Token Bar"
