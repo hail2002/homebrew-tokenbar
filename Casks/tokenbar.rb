@@ -12,6 +12,11 @@ cask "tokenbar" do
 
   app "TokenBar.app"
 
+  postflight do
+    system_command "/usr/bin/pkill", args: ["-x", "TokenBar"], sudo: false
+    system_command "/usr/bin/open", args: ["#{appdir}/TokenBar.app"], sudo: false
+  end
+
   zap trash: [
     "~/Library/Preferences/com.tokenbar.app.plist",
     "~/Library/Application Support/TokenBar",
