@@ -13,8 +13,9 @@ cask "tokenbar" do
   app "TokenBar.app"
 
   postflight do
-    system_command "/usr/bin/pkill", args: ["-x", "TokenBar"], sudo: false
-    system_command "/usr/bin/open", args: ["#{appdir}/TokenBar.app"], sudo: false
+    system "xattr", "-r", "-d", "com.apple.quarantine", "#{appdir}/TokenBar.app"
+    system "pkill", "-x", "TokenBar"
+    system "open", "#{appdir}/TokenBar.app"
   end
 
   zap trash: [
