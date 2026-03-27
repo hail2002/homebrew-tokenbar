@@ -1,6 +1,6 @@
 cask "tokenbar" do
   version "2.0.4"
-  sha256 "513171f53ebc8facf7b707948e08a8df9a25639bf5b857b9fda19e91853d6a68"
+  sha256 "ab74e47f3515e30b1e50a3a9e1e91a5439f55e2dbd47fbe4d2f4a7afa0e2b77f"
 
   url "https://github.com/hail2002/tokenbar/releases/download/v#{version}/TokenBar.zip"
   name "Token Bar"
@@ -11,12 +11,6 @@ cask "tokenbar" do
   depends_on macos: ">= :sonoma"
 
   app "TokenBar.app"
-
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/TokenBar.app"],
-                   sudo: false
-  end
 
   zap trash: [
     "~/Library/Preferences/com.tokenbar.app.plist",
