@@ -7,7 +7,7 @@ cask "tokenbar" do
   desc "macOS menubar app for Codex & Claude Code rate limits"
   homepage "https://github.com/hail2002/tokenbar"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "TokenBar.app"
 
